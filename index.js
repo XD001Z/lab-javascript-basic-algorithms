@@ -38,21 +38,6 @@ else {
   console.log(`What?! You both have the same name?`);
 }
 
-/*for (let i = 0; i < hacker1.length; i++) {
-  if (hacker1 === hacker2){
-    console.log(`What?! You both have the same name?`);
-    break
-  }
-  else if (hacker1[i].localeCompare(hacker2[i]) === -1){
-    console.log(`The driver's name goes first.`);
-    break
-  }
-  else if (hacker1[i].localeCompare(hacker2[i]) === 1){
-    console.log(`Yo, the navigator goes first, definitely.`);
-    break
-  }
-}*/
-
 //Bonus 1
 let longText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu purus, vulputate quis facilisis pulvinar, cursus nec elit. Cras velit sapien, viverra eget augue eu, vehicula pulvinar sem. Vivamus metus urna, vulputate quis augue pharetra, dapibus bibendum sapien. Donec mattis pretium ante at dictum. Quisque semper feugiat lacus, sed tempus odio mollis nec. Maecenas eu ex vel mi finibus fermentum ut a mi. Nam eget nibh in nunc malesuada ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum non venenatis dolor. Pellentesque pharetra tortor turpis, sed volutpat justo elementum vitae. Fusce vehicula accumsan sodales. Suspendisse molestie turpis viverra, blandit mauris sed, eleifend felis. Vivamus laoreet, nisl vel fermentum lacinia, arcu tellus egestas nibh, vulputate commodo dolor arcu ac elit. Pellentesque lobortis tortor orci, et efficitur magna pellentesque et. Nulla suscipit enim est, sed molestie mi auctor cursus. Nam libero nulla, tincidunt a arcu ut, gravida pretium sapien. Etiam imperdiet elementum sapien, ac molestie lectus eleifend eget. Donec vel varius eros, quis fringilla augue. In hac habitasse platea dictumst. Maecenas tincidunt semper risus semper tempus. Aenean felis metus, congue et rhoncus in, luctus quis magna. Phasellus id quam maximus, efficitur eros vestibulum, mattis elit. Donec quis dui et urna mollis venenatis. Sed et rutrum magna. Sed eget arcu ligula. Pellentesque et tincidunt erat. Suspendisse eget est ornare, hendrerit nibh nec, faucibus leo. Praesent turpis ipsum, dignissim ut lectus nec, porttitor congue diam. Aliquam pharetra velit leo, eget egestas ante hendrerit et. Nunc nec eros ullamcorper ligula luctus sagittis. Sed suscipit ornare quam, ac pharetra metus tincidunt non. Pellentesque felis massa, congue in risus eget, vehicula ultricies velit. Morbi sed mi a massa dignissim maximus.`
 
