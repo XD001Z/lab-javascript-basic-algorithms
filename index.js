@@ -16,19 +16,29 @@ else {
 }
 
 // Iteration 3: Loops
-let char = "";
+let name = "";
 for (let i=0;i < hacker1.length;i++) {
-  char += hacker1[i].toUpperCase() + " ";
+  name += hacker1[i].toUpperCase() + " ";
 }
-console.log(char);
+console.log(name);
 
-let reverseChar = ""
-for(let i = hacker2.length-1; i >= 0; i--){
-  reverseChar += hacker2[i]
+let reverseName = ""
+for(let i = hacker2.length-1; i >= 0; i--) {
+  reverseName += hacker2[i]
 }
-console.log(reverseChar);
+console.log(reverseName);
 
-for (let i = 0; i < hacker1.length; i++) {
+if (hacker1.localeCompare(hacker2) === -1) {
+  console.log(`The driver's name goes first.`);
+}
+else if (hacker1.localeCompare(hacker2) === 1) {
+  console.log(`Yo, the navigator goes first, definitely.`);
+}
+else {
+  console.log(`What?! You both have the same name?`);
+}
+
+/*for (let i = 0; i < hacker1.length; i++) {
   if (hacker1 === hacker2){
     console.log(`What?! You both have the same name?`);
     break
@@ -41,18 +51,18 @@ for (let i = 0; i < hacker1.length; i++) {
     console.log(`Yo, the navigator goes first, definitely.`);
     break
   }
-}
+}*/
 
 //Bonus 1
-let longText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu faucibus erat. Donec fringilla, lorem sit amet malesuada fringilla, eros eros condimentum sem, sit amet convallis purus nisi fringilla purus. Praesent ipsum nulla, rutrum nec massa vel, pretium venenatis justo. Aliquam bibendum finibus rhoncus. Cras orci orci, mattis sed tristique at, tincidunt sit amet erat. In vel turpis lacus. Donec eros tortor, tincidunt faucibus nulla et, ultricies elementum felis. Phasellus sit amet pretium nibh. Aliquam nec scelerisque velit. Sed consequat magna vel dapibus luctus. Nunc volutpat quis purus eget luctus. Fusce convallis neque molestie nulla iaculis, ac commodo eros interdum. Nulla facilisi. Nam mattis tortor id commodo gravida. Nunc tempus vulputate nulla vel vehicula. Suspendisse sed neque nec lorem luctus ultrices. Fusce venenatis felis lobortis, ornare dui vel, feugiat leo. Etiam feugiat ex justo, id lobortis massa semper sed. Aenean justo augue, posuere nec ultrices eu, rutrum hendrerit diam. Curabitur eget malesuada lectus, et volutpat lorem. Vestibulum faucibus efficitur quam mattis maximus. Ut iaculis tristique ornare. Maecenas imperdiet, lectus eget cursus cursus, justo neque aliquam nisl, id facilisis purus tellus quis arcu. Suspendisse ultricies non augue vitae pretium. Duis ac sodales nisi, id consequat purus. Aliquam blandit lacus id risus commodo bibendum. Phasellus diam metus, egestas sed leo sit amet, aliquet rhoncus tortor. Suspendisse lectus metus, auctor id elit egestas, vehicula sollicitudin orci. Nunc non neque at magna bibendum egestas. Etiam ipsum orci, ornare id dapibus in, aliquam vel lacus. Curabitur rutrum turpis non cursus porta. Aenean est eros, condimentum ut augue et, congue iaculis magna.`
+let longText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu purus, vulputate quis facilisis pulvinar, cursus nec elit. Cras velit sapien, viverra eget augue eu, vehicula pulvinar sem. Vivamus metus urna, vulputate quis augue pharetra, dapibus bibendum sapien. Donec mattis pretium ante at dictum. Quisque semper feugiat lacus, sed tempus odio mollis nec. Maecenas eu ex vel mi finibus fermentum ut a mi. Nam eget nibh in nunc malesuada ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum non venenatis dolor. Pellentesque pharetra tortor turpis, sed volutpat justo elementum vitae. Fusce vehicula accumsan sodales. Suspendisse molestie turpis viverra, blandit mauris sed, eleifend felis. Vivamus laoreet, nisl vel fermentum lacinia, arcu tellus egestas nibh, vulputate commodo dolor arcu ac elit. Pellentesque lobortis tortor orci, et efficitur magna pellentesque et. Nulla suscipit enim est, sed molestie mi auctor cursus. Nam libero nulla, tincidunt a arcu ut, gravida pretium sapien. Etiam imperdiet elementum sapien, ac molestie lectus eleifend eget. Donec vel varius eros, quis fringilla augue. In hac habitasse platea dictumst. Maecenas tincidunt semper risus semper tempus. Aenean felis metus, congue et rhoncus in, luctus quis magna. Phasellus id quam maximus, efficitur eros vestibulum, mattis elit. Donec quis dui et urna mollis venenatis. Sed et rutrum magna. Sed eget arcu ligula. Pellentesque et tincidunt erat. Suspendisse eget est ornare, hendrerit nibh nec, faucibus leo. Praesent turpis ipsum, dignissim ut lectus nec, porttitor congue diam. Aliquam pharetra velit leo, eget egestas ante hendrerit et. Nunc nec eros ullamcorper ligula luctus sagittis. Sed suscipit ornare quam, ac pharetra metus tincidunt non. Pellentesque felis massa, congue in risus eget, vehicula ultricies velit. Morbi sed mi a massa dignissim maximus.`
 
-let numberOfWords = longText.split(" ");
-console.log(numberOfWords.length);
+let wordArray = longText.split(" ");
+console.log(wordArray.length);
 
 let countEt = 0;
-for (let i = 0; i < numberOfWords.length; i++){
-  if (numberOfWords[i] === "et" || numberOfWords[i] === "et,"){
-    countEt += 1;
+for (word of wordArray){
+  if(/^et[^a-z]$/i.test(word) || /^et$/i.test(word)) {
+    countEt++;
   }
 }
 console.log(countEt);
